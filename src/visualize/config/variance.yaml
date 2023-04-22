@@ -1,0 +1,20 @@
+# x    y    z   vel_x  vel_y    vel_z  
+Q1_diag: [0.0085, 0.0055, 0.0075, 0.0088, 0.009, 0.007]
+
+# roll pitch  yaw  vel_roll vel_pitch vel_yaw 
+Q2_diag: [0.09,  0.055, 0.045, 0.1, 0.09, 0.02]
+
+# measure_x, measure_y, measure_z
+R1_diag: [0.008, 0.004, 0.007]
+
+# measure_roll, measure_pitch, measure_yaw
+R2_diag: [0.08, 0.05, 0.04]
+
+# cov_x, cov_y, cov_z, cov_vel_x, cov_vel_y, cov_vel_z
+P1_diag: [0.2, 0.5, 0.4, 0.3, 0.2, 0.4]
+
+# cov_roll, cov_pitch, cov_yaw, cov_vel_roll, cov_vel_pitch, cov_vel_yaw
+P2_diag: [0.6, 0.55, 0.5, 0.3, 0.4, 0.5]
+
+# publish rate (30 hz)
+output_interval: 0.03333

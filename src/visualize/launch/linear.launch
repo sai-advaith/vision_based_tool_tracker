@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<launch>
+
+  <arg name="_output_interval" default="3"/>
+  <arg name="_output_interval_kf" default="1"/>
+
+  <node name="linear_path" pkg="visualize" type="linear_path.py" output="screen">
+    <param name="_output_interval" value="$(arg _output_interval)"/>
+  </node>
+  
+  <node name="trajectory_model" pkg="visualize" type="trajectory_model.py" output="screen">
+    <param name="_output_interval" value="$(arg _output_interval_kf)"/>
+    <rosparam command="load" file="$(find visualize)/config/variance.yaml" />
+  </node>
+
+</launch>

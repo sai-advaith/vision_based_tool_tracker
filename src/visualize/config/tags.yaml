@@ -1,0 +1,21 @@
+# fill in standalong tags if any
+# standalone_tags:
+#   [
+#     {id: 10, size: 0.15},
+#     {id: 20, size: 0.1},
+#     {id: 30, size: 0.07}
+#   ]
+tag_bundles:
+  [
+    {
+      name: 'april_tag',
+      layout:
+        [
+          # tags of size 7.5 mm. Change the ID number if using other tags
+          {id: 6, size: 0.0075}, 
+          {id: 7, size: 0.0075},
+          {id: 0, size: 0.0075},
+          {id: 1, size: 0.0075}
+        ]
+    }
+  ]

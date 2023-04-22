@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<launch>
+  <include file="$(find visualize)/launch/continuous_detection.launch"/>
+  <arg name="_output_interval_eval" default="0.2"/>
+
+      <include file="$(find visualize)/launch/evaluator.launch">
+        <arg name="_output_interval" value="$(arg _output_interval_eval)"/>
+    </include>
+
+  <node name="kalman_filter" pkg="visualize" type="kalman_filter.py" output="screen">
+      <rosparam command="load" file="$(find visualize)/config/variance.yaml" />
+  </node>
+  
+</launch>
